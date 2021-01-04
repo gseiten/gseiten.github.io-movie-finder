@@ -4,11 +4,20 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://gseiten.github.io/movie-finder",
   "dependencies": {
+    "axios": "^0.21.1",
+    "bulma": "^0.9.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "gh-pages": "^3.1.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.4.9",
+    "vue-spinners": "^1.0.2",
+    "vuex": "^3.6.0",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.0",
