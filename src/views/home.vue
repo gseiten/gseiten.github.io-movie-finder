@@ -169,7 +169,7 @@ export default {
 		return {
             movies: [],
             movie_details: {},
-			omdb_url: "http://www.omdbapi.com/?",
+			omdb_url: "https://www.omdbapi.com/?",
             api_key: "e4e5c824",
             search_text: "",
             mloader: false,
@@ -188,7 +188,7 @@ export default {
 
         this.search_type = this.search_options[0]; // default
         
-        axios.get('http://www.omdbapi.com/', {
+        axios.get('https://www.omdbapi.com/', {
             params: {
                 s: 'superman',
                 apikey: this.api_key,
@@ -220,7 +220,7 @@ export default {
                 let id_list = this.search_text.split(",");
                 id_list.forEach(element => {
                     promises.push(
-                        axios.get('http://www.omdbapi.com/', {
+                        axios.get('https://www.omdbapi.com/', {
                             params: {
                                 i: element,
                                 apikey: this.api_key
@@ -249,7 +249,7 @@ export default {
             } else if(this.search_type.id === 2){
                 //  search by name
 
-                axios.get('http://www.omdbapi.com/', {
+                axios.get('https://www.omdbapi.com/', {
                     params: {
                         s: this.search_text,
                         apikey: this.api_key,
@@ -276,7 +276,7 @@ export default {
 
             this.is_modal_open = true;
             this.movie_details = {};
-            axios.get('http://www.omdbapi.com/', {
+            axios.get('https://www.omdbapi.com/', {
                 params: {
                     i: id,
                     apikey: this.api_key
@@ -312,7 +312,7 @@ export default {
             let id_list = this.$store.getters.favorites;
             id_list.forEach(element => {
                 promises.push(
-                    axios.get('http://www.omdbapi.com/', {
+                    axios.get('https://www.omdbapi.com/', {
                         params: {
                             i: element,
                             apikey: this.api_key
