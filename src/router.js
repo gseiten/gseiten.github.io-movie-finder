@@ -6,9 +6,11 @@ import home from './views/home'
 Vue.use(Router);
 
 const router = new Router({
+    mode: 'history',
+    // fallback: true,
     routes: [
         {
-            path: '/',
+            path: '/movie-finder',
             name: 'home',
             component: home
         }

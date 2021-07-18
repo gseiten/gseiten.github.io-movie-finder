@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/movie-finder/'
+  publicPath: '/movie-finder',
 }
